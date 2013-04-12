@@ -5,7 +5,7 @@ require 'gamifying_formatter/version'
 
 Gem::Specification.new do |gem|
   gem.name          = "gamifying_formatter"
-  gem.version       = GamifyingFormatter::VERSION
+  gem.version       = '0.0.1'
   gem.authors       = ["Chris Belsole"]
   gem.email         = ["cbelsole@gmail.com"]
   gem.description   = %q{The Gamifying Formatter}
