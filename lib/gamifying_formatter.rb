@@ -4,8 +4,6 @@ require 'test_info'
 require 'yaml'
 
 class GamifyingFormatter < RSpec::Core::Formatters::BaseTextFormatter
-  @trophies =
-
   def initialize(output)
     super(output)
     @test_info = TestInfo.new
