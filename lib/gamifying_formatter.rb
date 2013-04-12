@@ -1,4 +1,3 @@
-require "gamifying_formatter/version"
 require "rspec/core/formatters/base_text_formatter"
 require 'test_info'
 require 'yaml'
