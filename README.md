@@ -1,6 +1,6 @@
 # GamifyingFormatter
 
-TODO: Write a gem description
+GameifyingFormatter is here to solve your testing woes. With trophies and achievements it makes running tests fun.
 
 ## Installation
 
@@ -16,9 +16,15 @@ Or install it yourself as:
 
     $ gem install gamifying_formatter
 
+If you want to use the Gamifying Formatter as your default formatter just put this option in your .rspec file:
+
+  --format GamifyingFormatter
+
 ## Usage
 
-TODO: Write usage instructions here
+To use the GamifyingFormatter all you need to do is add this option when you are running your spect tests if you did not already edit your .rspec file:
+
+--format GamifyingFormatter
 
 ## Contributing
 
