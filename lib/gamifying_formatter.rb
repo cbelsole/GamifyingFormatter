@@ -6,7 +6,11 @@ class GamifyingFormatter < RSpec::Core::Formatters::BaseTextFormatter
   def initialize(output)
     super(output)
     @test_info = TestInfo.new
-    @past_results = YAML::load(File.new('data/past_results.yml', 'r')) || TestInfo.new
+    if File.exists?('.past_results.yml')
+      @past_results = YAML::load(File.new('.past_results.yml', 'r'))
+    else
+      @past_results = TestInfo.new
+    end
   end
 
   def close
@@ -18,14 +22,14 @@ class GamifyingFormatter < RSpec::Core::Formatters::BaseTextFormatter
     @test_info.achievements = @past_results.achievements + @test_info.achievements
     @test_info.number_of_achievements = @test_info.achievements.size
 
-    File.open('data/past_results.yml', 'w') { |file| file.puts @test_info.to_yaml }
+    File.open('.past_results.yml', 'w') { |file| file.puts @test_info.to_yaml }
   end
 
   def dump_summary(duration, example_count, failure_count, pending_count)
 
     super(duration, example_count, failure_count, pending_count)
 
-    unless File.exists?('data/past_results.yml')
+    unless File.exists?('.past_results.yml')
       return
     end
 
