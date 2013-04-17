@@ -1,6 +1,14 @@
 # GamifyingFormatter
+![Achievements and trophies](achievement.tiff "Achievements and trophies")
 
 GameifyingFormatter is here to solve your testing woes. With trophies and achievements it makes running tests fun.
+
+These are the achievements you can get points for right now:
+Fixing failed tests
+Improving test speed
+Adding tests
+
+You revieve the trophies based on the amount of points you get which start out small and get bigger.
 
 ## Installation
 
