@@ -8,7 +8,7 @@ Fixing failed tests
 Improving test speed
 Adding tests
 
-You revieve the trophies based on the amount of points you get which start out small and get bigger.
+You receive the trophies based on the amount of points you get which start out small and get bigger.
 
 ## Installation
 
@@ -41,3 +41,4 @@ To use the GamifyingFormatter all you need to do is add this option when you are
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
