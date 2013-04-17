@@ -1,7 +1,7 @@
 # GamifyingFormatter
 ![Achievements and Trophies](/achievement.png)
 
-GameifyingFormatter is here to solve your testing woes. With trophies and achievements it makes running tests fun.
+GameifyingFormatter is here to solve your testing woes. With trophies and achievements it makes running tests fun. This project was created so that you could use it as a stand alone test runner or extend it and add achievements to your own test runner.
 
 These are the achievements you can get points for right now:
 Fixing failed tests
