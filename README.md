@@ -1,5 +1,5 @@
 # GamifyingFormatter
-![Achievements and trophies](achievement.png)
+![Achievements and trophies](/achievement.png)
 
 GameifyingFormatter is here to solve your testing woes. With trophies and achievements it makes running tests fun.
 
