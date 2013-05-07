@@ -15,7 +15,6 @@ class GamifyingFormatter < RSpec::Core::Formatters::BaseTextFormatter
       @test_info.number_of_failed_tests = 0
       @test_info.total_time = 0.0
     end
-
     @got_achievement = false
   end
 
@@ -114,8 +113,9 @@ class GamifyingFormatter < RSpec::Core::Formatters::BaseTextFormatter
   end
 
   def check_level_up(xp)
-    if xp == 11 || xp == 26 || xp == 51 || xp == 101
+    if xp == 10 || xp == 25 || xp == 50 || xp == 100
       @test_info.level += 1
+      @test_info.xp = 0
     end
   end
 
