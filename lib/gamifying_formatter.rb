@@ -5,6 +5,7 @@ require 'yaml'
 class GamifyingFormatter < RSpec::Core::Formatters::BaseTextFormatter
   def initialize(output)
     super(output)
+
     if File.exists?('.past_results.yml')
       @test_info = YAML::load(File.new('.past_results.yml', 'r'))
     else
@@ -15,6 +16,7 @@ class GamifyingFormatter < RSpec::Core::Formatters::BaseTextFormatter
       @test_info.number_of_failed_tests = 0
       @test_info.total_time = 0.0
     end
+
     @got_achievement = false
   end
 
@@ -32,15 +34,19 @@ class GamifyingFormatter < RSpec::Core::Formatters::BaseTextFormatter
 
     super(duration, example_count, failure_count, pending_count)
 
+    calculate_achevements(example_count, failure_count, duration)
+
+    output_achievements
+
+    output_xp_bar
+  end
+
+  def calculate_achevements(example_count, failure_count, duration)
     number_of_tests_achievement(@test_info.number_of_tests, example_count)
 
     number_of_fixed_tests_achievement(@test_info.number_of_failed_tests, failure_count)
 
     decreased_test_time_achievement(@test_info.total_time, duration)
-
-    output_achievements
-
-    output_xp_bar
   end
 
   def output_achievements
