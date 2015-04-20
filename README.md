@@ -10,7 +10,7 @@ Adding tests
 
 You receive the trophies based on the amount of points you get which start out small and get bigger.
 
-Now works on Rspec 1/2/3.
+Now works on Rspec 1/2/3 and Minitest 5.
 
 Thanks goes to the good folks at [nyan-cat-formatter](https://github.com/mattsears/nyan-cat-formatter) for the inspiration to do this and blazing for the trail for creating formatters.
 
@@ -34,9 +34,15 @@ If you want to use the Gamifying Formatter as your default formatter just put th
 
 ## Usage
 
+### Rspec
+
 To use the GamifyingFormatter all you need to do is add this option when you are running your spect tests if you did not already edit your .rspec file:
 
     --format GamifyingFormatter
+
+### Minitest
+
+To use the GameifyingFormatter with Minitest, simply install it via `gem` or `bundle` and you should be all set to go. 
 
 ## Example
 
