@@ -11,13 +11,6 @@ class RSpec3 < RSpec::Core::Formatters::BaseTextFormatter
     @test_info = load_test_info
   end
 
-  def wrap_up(num_of_examples, num_of_failed_examples, duration)
-    @test_info.number_of_tests = num_of_examples
-    @test_info.number_of_failed_tests = num_of_failed_examples
-    @test_info.total_time = duration
-    File.open('.past_results.yml', 'w') { |file| file.puts @test_info.to_yaml }
-  end
-
   def dump_summary(summary_notification)
     super(summary_notification)
 
